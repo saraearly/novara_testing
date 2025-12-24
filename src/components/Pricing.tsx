@@ -1,0 +1,130 @@
+import React from "react";
+
+import config from "../config/index.json";
+
+interface TeamMember {
+  name: string;
+  role: string;
+  image: string;
+  degree?: string;
+  linkedin?: string;
+}
+
+const Pricing = () => {
+  const { pricing } = config;
+  const { subgroups, title, subtitle } = pricing;
+
+  return (
+    <section className={`bg-background py-8`} id="pricing">
+      <div className={`container mx-auto px-4 pt-4 pb-12`}>
+        <h1
+          className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
+        >
+          {title.split(" ").map((word, index) => (
+            <span
+              key={index}
+              className={index % 2 ? "text-primary" : "text-border"}
+            >
+              {word}{" "}
+            </span>
+          ))}
+        </h1>
+        <div className={`w-full mb-4`}>
+          <div
+            className={`h-1 mx-auto bg-primary w-64 opacity-25 my-0 py-0 rounded-t`}
+          ></div>
+        </div>
+        {subtitle && (
+          <p className="text-center text-gray-600 dark:text-gray-300 text-lg mb-12 mt-8">
+            {subtitle}
+          </p>
+        )}
+
+        {subgroups.map((subgroup) => (
+          <div key={subgroup.name} className="mb-8 last:mb-0">
+            <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-6">
+              {subgroup.name}
+            </h2>
+            {subgroup.items.length > 0 ? (
+              <div
+                className={
+                  subgroup.name === "Senior Advisor"
+                    ? "flex justify-center"
+                    : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
+                }
+              >
+                {(subgroup.items as TeamMember[]).map((member, index) => (
+                  <div
+                    key={`${member.name}-${index}`}
+                    className={`bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${
+                      subgroup.name === "Senior Advisor"
+                        ? "max-w-sm w-full"
+                        : ""
+                    }`}
+                  >
+                    <div className="relative w-full aspect-square overflow-hidden bg-gray-200">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4 text-center">
+                      <div className="flex items-center justify-center gap-2 mb-1">
+                        <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                          {member.name}
+                        </h3>
+                        {member.linkedin && (
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`${member.name} LinkedIn`}
+                            className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                          >
+                            <svg
+                              className="w-5 h-5 fill-current"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                          </a>
+                        )}
+                      </div>
+                      <p className="text-primary font-semibold mb-2 text-sm">
+                        {member.role}
+                      </p>
+                      <div className="mb-3 space-y-1">
+                        {member.degree && (
+                          <div className="flex items-center justify-center">
+                            <svg
+                              className="w-4 h-4 text-primary mr-1.5 flex-shrink-0"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                            </svg>
+                            <p className="text-xs text-gray-700 dark:text-gray-300">
+                              {member.degree}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-center text-gray-500 italic">
+                No members in this group yet.
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Pricing;

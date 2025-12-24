@@ -1,0 +1,315 @@
+{
+  "company": {
+    "name": "AI Development Solutions",
+    "logo": "/assets/images/logo.png"
+  },
+  "navigation": [
+    {
+      "name": "What We Offer",
+      "href": "product"
+    },
+    {
+      "name": "Our Team",
+      "href": "pricing"
+    },
+    {
+      "name": "Our Projects",
+      "href": "projects"
+    }
+  ],
+  "mainHero": {
+    "title": "Innovate medical intelligence",
+    "subtitle": " NOVARA",
+    "description": "We help you design, validate, and deploy reliable machine-learning models with expert precision.",
+    "img": "/assets/images/medicalDataAI.jpg",
+    "primaryAction": {
+      "text": "Contact Us",
+      "href": "mailto:contact@fomal.co?subject=AI Development Inquiry"
+    },
+    "secondaryAction": {
+      "text": "Contact Us",
+      "href": "mailto:contact@fomal.co?subject=AI Development Inquiry"
+    }
+  },
+  "features": {
+    "title": "Key Features",
+    "subtitle": "Why Choose Us",
+    "description": "We provide comprehensive AI solutions tailored to your needs.",
+    "items": [
+      {
+        "name": "Advanced Analytics",
+        "description": "Deep insights into your data.",
+        "icon": "/assets/images/actionable_insights.png"
+      },
+      {
+        "name": "Secure Processing",
+        "description": "Enterprise-grade security for your data.",
+        "icon": "/assets/images/pattern_rec.png"
+      },
+      {
+        "name": "Scalable Infrastructure",
+        "description": "Built to grow with your business.",
+        "icon": "/assets/images/prediciton.jpg"
+      },
+      {
+        "name": "Expert Support",
+        "description": "24/7 support from our AI experts.",
+        "icon": "/assets/images/trend_analysis.avif"
+      }
+    ]
+  },
+  "product": {
+    "title": "What We Offer",
+    "items": [
+      {
+        "title": "Medical Analytics Solutions",
+        "description": "We transform complex clinical and imaging data into clear, actionable insights to support diagnostics, clinical decision-making, and operational efficiency.",
+        "img": "/assets/images/clinical_data.png"
+      },
+      {
+        "title": "Deep Learning Modeling",
+        "description": "We design, train, and optimize custom deep learning models—including computer vision, multimodal architectures, and predictive pipelines—tailored to your medical data and use case.",
+        "img": "/assets/images/dl_modelling.png"
+      },
+      {
+        "title": "Actionable Insights from Clinical Data",
+        "description": "We uncover clinically meaningful patterns from structured and unstructured datasets to guide treatment planning, trial design, and strategic decision-making.",
+        "img": "/assets/images/outcome prediction.png"
+      },
+      {
+        "title": "Predictive Analytics",
+        "description": "We develop prognostic models that forecast patient outcomes, treatment responses, and disease progression to support risk stratification and personalized medicine.",
+        "img": "/assets/images/trend_analysis.png"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Real-world applications of AI in healthcare and clinical research",
+    "items": [
+      {
+        "title": "Clinical Decision Support & Disease Prediction",
+        "description": "We've developed AI tools to aid in faster, more accurate clinical decisions, from stroke and Parkinson's diagnosis to broader hospital applications. These systems aim to support clinicians in real-world care settings.",
+        "img": "/assets/images/project_1.webp",
+        "publishedPapers": [
+          {
+            "title": "Improved multi-site Parkinson's disease classification with counterfactual inference",
+            "authors": "FoMAL Research Team",
+            "journal": "Medical AI Research",
+            "year": "2024",
+            "link": "#"
+          },
+          {
+            "title": "Stroke Decision Support Systems for Clinical Practice",
+            "authors": "Kimberly Amador, FoMAL Research Team",
+            "journal": "Clinical Decision Support",
+            "year": "2024",
+            "link": "#"
+          }
+        ],
+        "technologies": ["Deep Learning", "Counterfactual Inference", "Clinical Decision Support", "Multi-site Analysis"],
+        "additionalInfo": "Our AI-powered clinical decision support tools help clinicians make faster and more accurate diagnoses across multiple disease domains, with a particular focus on stroke and Parkinson's disease classification."
+      },
+      {
+        "title": "Causal & Counterfactual AI for Brain Imaging",
+        "description": "Our research uses AI to explore \"what if\" scenarios in the brain, generating counterfactual images to understand how changes in brain structure relate to aging and disease. This approach makes predictions more interpretable and actionable.",
+        "img": "/assets/images/project_2.png",
+        "publishedPapers": [
+          {
+            "title": "MACAW & MACAW 3D: Causal Generative Models for Brain Imaging",
+            "authors": "FoMAL Research Team",
+            "journal": "Medical Image Analysis",
+            "year": "2024",
+            "link": "#"
+          },
+          {
+            "title": "Generating high-resolution brain counterfactuals via autoencoders + causal flows",
+            "authors": "FoMAL Research Team",
+            "journal": "Neuroimaging Methods",
+            "year": "2024",
+            "link": "#"
+          },
+          {
+            "title": "3D conditional diffusion for self-explainable brain age prediction",
+            "authors": "FoMAL Research Team",
+            "journal": "Medical Image Computing",
+            "year": "2024",
+            "link": "#"
+          }
+        ],
+        "technologies": ["Causal AI", "Generative Models", "Counterfactual Generation", "3D Diffusion Models", "Brain Age Prediction"],
+        "additionalInfo": "By generating counterfactual brain images, we enable clinicians to visualize and understand how brain structures might change under different conditions, improving the interpretability of AI predictions."
+      },
+      {
+        "title": "In-Silico Modeling of Neurodegeneration",
+        "description": "We have developed computational models of Alzheimer's and other dementia subtypes to study disease progression and support clinical decision-making. These in silico approaches enable exploration of disease dynamics and inform diagnosis and treatment planning.",
+        "img": "/assets/images/project_3.png",
+        "publishedPapers": [
+          {
+            "title": "Towards realistic simulation of disease progression in visual cortex with CNNs",
+            "authors": "Sara Early, FoMAL Research Team",
+            "journal": "Computational Neuroscience",
+            "year": "2024",
+            "link": "#"
+          },
+          {
+            "title": "Digital dementia and testing cognitive interventions in degenerating networks",
+            "authors": "Sara Early, FoMAL Research Team",
+            "journal": "Neurodegenerative Disease Modeling",
+            "year": "2024",
+            "link": "#"
+          }
+        ],
+        "technologies": ["In-Silico Modeling", "CNN", "Disease Progression Simulation", "Computational Neuroscience"],
+        "additionalInfo": "Our computational models simulate disease progression in neurodegenerative conditions, allowing researchers and clinicians to test interventions and understand disease mechanisms in a controlled digital environment."
+      },
+      {
+        "title": "Spatial Transcriptomics & Systems Biology",
+        "description": "We have developed computational models for gene regulatory networks in domains of stem cell differentiation and tumorigenesis.",
+        "img": "/assets/images/project_4.png",
+        "publishedPapers": [
+          {
+            "title": "Emergence of diversity in homogeneous coupled Boolean networks",
+            "authors": "FoMAL Research Team",
+            "journal": "Systems Biology",
+            "year": "2024",
+            "link": "#"
+          },
+          {
+            "title": "Critical dynamics in coupled Boolean networks with applications in pluripotent stem cells",
+            "authors": "FoMAL Research Team",
+            "journal": "Stem Cell Research",
+            "year": "2024",
+            "link": "#"
+          },
+          {
+            "title": "Agent-based modeling of multiple myeloma",
+            "authors": "FoMAL Research Team",
+            "journal": "Oncology Research",
+            "year": "2023",
+            "link": "#"
+          }
+        ],
+        "technologies": ["Systems Biology", "Boolean Networks", "Agent-Based Modeling", "Gene Regulatory Networks", "Spatial Transcriptomics"],
+        "additionalInfo": "Our computational approaches model complex biological systems, from stem cell differentiation to cancer progression, providing insights into gene regulatory mechanisms and cellular behavior."
+      },
+      {
+        "title": "Evaluation of MR Acquisitions",
+        "description": "We have performed quantitative and qualitative assessments of MR image sequences and acquisitions. Our research includes multi-modal imaging, automatic segmentation, and enhanced detection of brain features.",
+        "img": "/assets/images/project_5.avif",
+        "publishedPapers": [
+          {
+            "title": "Enhanced reader confidence for calcification vs. microbleed using QSM vs. SWI",
+            "authors": "FoMAL Research Team",
+            "journal": "Magnetic Resonance Imaging",
+            "year": "2024",
+            "link": "#"
+          },
+          {
+            "title": "Automatic image segmentation for multi-modal MR sequences",
+            "authors": "FoMAL Research Team",
+            "journal": "Medical Image Analysis",
+            "year": "2024",
+            "link": "#"
+          }
+        ],
+        "technologies": ["Multi-modal MR Imaging", "Automatic Segmentation", "QSM", "SWI", "Image Quality Assessment"],
+        "additionalInfo": "Our work improves the accuracy and confidence of MR image interpretation through advanced sequence analysis and automated segmentation techniques, enabling better detection of subtle brain features."
+      },
+      {
+        "title": "Signal Processing in Brain Dynamics",
+        "description": "Advanced signal processing techniques for analyzing brain dynamics and neural activity patterns.",
+        "img": "/assets/images/project_6.png",
+        "publishedPapers": [
+          {
+            "title": "Signal Processing Methods for Brain Dynamics Analysis",
+            "authors": "Mohammad Khazaei, FoMAL Research Team",
+            "journal": "Neural Signal Processing",
+            "year": "2024",
+            "link": "#"
+          }
+        ],
+        "technologies": ["Signal Processing", "Brain Dynamics", "Neural Signal Analysis", "Time-Series Analysis"],
+        "additionalInfo": "Our signal processing research focuses on extracting meaningful patterns from neural signals, contributing to a better understanding of brain function and dynamics."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Our Team",
+    "subtitle": "Meet our experienced team of AI professionals",
+    "subgroups": [
+      {
+        "name": "Executive",
+        "items": [
+          {
+            "name": "Sara Early",
+            "role": "CEO and Co-Founder",
+            "degree": "Ph.D. student in Biomedical Engineering",
+            "image": "/assets/images/Sara.JPG",
+            "linkedin": "https://www.linkedin.com/in/saraearly"
+          },
+          {
+            "name": "Vibu Vignesh",
+            "role": "CTO and Co-Founder",
+            "degree": "Ph.D. in Biomedical Engineering",
+            "image": "/assets/images/Vibu.webp",
+            "linkedin": "https://www.linkedin.com/in/vibujithan-vigneshwaran-323aa262/"
+          },
+          {
+            "name": "Chris Kang",
+            "role": "COO and Co-Founder",
+            "degree": "Ph.D. in Applied Mathematics",
+            "image": "/assets/images/CK.webp",
+            "linkedin": "https://www.linkedin.com/in/chris-kang-4570091b8"
+          }
+        ]
+      },
+      {
+        "name": "Research & Development",
+        "items": [
+          {
+            "name": "Mohammad Khazaei",
+            "role": "Signal Processing Specialist",
+            "degree": "Ph.D. in Biomedical Engineering",
+            "image": "/assets/images/Mohammad.webp",
+            "linkedin": "https://www.linkedin.com/in/mohammad-khazaei-47162566/"
+          },
+          {
+            "name": "Kimberly Amador",
+            "role": "Medical Image Specialist",
+            "degree": "Ph.D. in Biomedical Engineering",
+            "image": "/assets/images/Kim.webp",
+            "linkedin": "https://www.linkedin.com/in/kimberlyamador/"
+          }
+        ]
+      },
+      {
+        "name": "Senior Advisor",
+        "items": [
+          {
+            "name": "Dr.rer.nat. Nils Forkert",
+            "role": "Professor in the Departments of Radiology & Clinical Neurosciences",
+            "image": "/assets/images/Nils.webp",
+            "linkedin": "https://www.linkedin.com/in/nils-daniel-forkert-577a6638/"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's turn your clinical data into actionable intelligence",
+    "description": "Have a project in mind or want to explore how machine learning can support your research or clinical workflows? Reach out to us and our team will get back to you shortly.",
+    "email": "contact@yourcompany.com",
+    "emailText": "Send us an email",
+    "sampleMessage": "Hello,\n\nI’m interested in learning more about your machine learning solutions for clinical data analysis. We would like to discuss a potential collaboration for predictive modelling and outcome analysis.\n\nPlease let us know a suitable time to connect.\n\nBest regards,\n[Your Name]\n[Organisation]\n[Contact Information]"
+  },
+  "about": {
+    "sections": [],
+    "socialMedia": {
+      "github": "https://github.com/yourusername",
+      "twitter": "https://twitter.com/yourusername",
+      "linkedin": "https://www.linkedin.com/company/yourcompany"
+    }
+  }
+}
