@@ -110,18 +110,12 @@ const Product = () => {
   return (
     <section className={`bg-background py-6`} id="product">
       <div className={`container max-w-5xl mx-auto m-4 px-4`}>
-        <h1
-          className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
-        >
-          {product.title.split(" ").map((word, index) => (
-            <span
-              key={index}
-              className={index % 2 ? "text-primary" : "text-border"}
-            >
-              {word}{" "}
-            </span>
-          ))}
+        <h1 className="flex items-center text-5xl font-bold leading-tight text-center my-8">
+          <span className="flex-grow h-1 bg-primary mr-4"></span>
+          <span className="whitespace-nowrap">{product.title}</span>
+          <span className="flex-grow h-1 bg-primary ml-4"></span>
         </h1>
+
         <Divider />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
           {product.items.map((item, index) => (
