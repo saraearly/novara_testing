@@ -4,13 +4,13 @@ import MainHero from "./MainHero";
 import MainHeroImage from "./MainHeroImage";
 
 const HeroSection = () => (
-  <>
+  <div className="relative">
     {/* Header at top */}
     <Header />
 
-    <section className="w-full relative lg:h-[600px] pt-20">
-      {/* Hero image (right side on lg and up) */}
-      <div className="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 z-0">
+    <section className="w-full relative lg:h-[600px] flex items-center">
+      {/* Hero image (right side, starting around halfway) */}
+      <div className="absolute inset-y-0 right-0 lg:w-1/2 lg:left-1/2 z-0">
         <MainHeroImage />
       </div>
 
@@ -33,7 +33,7 @@ const HeroSection = () => (
         </div>
       </div>
     </section>
-  </>
+  </div>
 );
 
 export default HeroSection;
