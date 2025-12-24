@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import config from "../config/index.json";
 
@@ -8,13 +9,7 @@ type MainHeroImageProps = {
 const MainHeroImage = ({ className }: MainHeroImageProps) => {
   const { mainHero } = config;
 
-  return (
-    <img
-      src={mainHero.img}
-      alt="Hero image"
-      className={className}
-    />
-  );
+  return <img src={mainHero.img} alt="Hero image" className={className} />;
 };
 
 export default MainHeroImage;
