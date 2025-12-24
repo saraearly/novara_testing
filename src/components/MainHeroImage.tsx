@@ -8,7 +8,7 @@ const MainHeroImage = () => {
       <img
         className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
         src={mainHero.img}
-        alt="Hero image" // <-- default string, no TypeScript error
+        alt="Hero image"
       />
     </div>
   );
