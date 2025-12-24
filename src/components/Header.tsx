@@ -9,7 +9,7 @@ const Header = () => {
   const { name: companyName, logo } = company;
 
   return (
-    <header className="w-full bg-[#0b1b56ff] py-5">
+    <header className="w-full bg-[#08164aff] py-5">
       <Popover>
         <div className="relative px-4 sm:px-6 lg:px-8">
           <nav

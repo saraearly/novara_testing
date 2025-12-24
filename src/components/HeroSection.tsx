@@ -14,7 +14,7 @@ const HeroSection = () => (
         className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
         style={{
           background:
-            "linear-gradient(90deg, #0b1b56ff 0%, #112057ff 20%, rgba(15,42,68,0.0) 100%)",
+            "linear-gradient(90deg, #08164aff 0%, #111e4eff 30%, rgba(15,42,68,0.0) 100%)",
         }}
       />
 
