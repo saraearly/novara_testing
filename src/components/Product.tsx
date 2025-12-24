@@ -3,10 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import config from "../config/index.json";
 
-function useOnScreen(
-  ref: MutableRefObject<HTMLDivElement | null>,
-  rootMargin = "0px"
-) {
+function useOnScreen(ref: MutableRefObject<HTMLDivElement | null>, rootMargin = "0px") {
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
@@ -88,9 +85,7 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
             0 ${4 + rowIndex}px ${8 + rowIndex}px rgba(0, 0, 0, 0.08),
             inset 0 1px 0 rgba(255, 255, 255, 0.6)
           `,
-          transform: `perspective(1000px) rotateY(
-            ${rowIndex === 0 ? -1 : 1}deg
-          ) translateZ(0)`,
+          transform: `perspective(1000px) rotateY(${rowIndex === 0 ? -1 : 1}deg) translateZ(0)`,
         }}
       >
         {children}
@@ -101,6 +96,7 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
 
 const Product = () => {
   const { product } = config;
+  const textColor = "#0b1845ff"; // define your blue here
 
   return (
     <section className="bg-background py-6" id="product">
@@ -108,18 +104,18 @@ const Product = () => {
         {/* Title with lines on either side */}
         <div className="max-w-4xl mx-auto my-8 px-4">
           <h1 className="flex items-center text-5xl font-bold leading-tight text-center">
-            {/* Line on the left with same color as text */}
-            <span className="flex-grow h-1 mr-6" style={{ backgroundColor: "#0b1845ff" }}></span>
-
-            {/* Text with custom hex color */}
-            <span className="whitespace-nowrap" style={{ color: "#0b1845ff" }}>
+            <span
+              className="flex-grow h-1 mr-6"
+              style={{ backgroundColor: textColor }}
+            ></span>
+            <span className="whitespace-nowrap" style={{ color: textColor }}>
               {product.title}
             </span>
-
-            {/* Line on the right with same color as text */}
-            <span className="flex-grow h-1 ml-6" style={{ backgroundColor: "#0b1845ff" }}></span>
+            <span
+              className="flex-grow h-1 ml-6"
+              style={{ backgroundColor: textColor }}
+            ></span>
           </h1>
-
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
