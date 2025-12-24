@@ -88,9 +88,7 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
             0 ${4 + rowIndex}px ${8 + rowIndex}px rgba(0, 0, 0, 0.08),
             inset 0 1px 0 rgba(255, 255, 255, 0.6)
           `,
-          transform: `perspective(1000px) rotateY(${
-            rowIndex === 0 ? -1 : 1
-          }deg) translateZ(0)`,
+          transform: `perspective(1000px) rotateY(${rowIndex === 0 ? -1 : 1}deg) translateZ(0)`,
         }}
       >
         {children}
@@ -108,9 +106,9 @@ const Product = () => {
         {/* Title with lines on either side */}
         <div className="max-w-4xl mx-auto my-8 px-4">
           <h1 className="flex items-center text-5xl font-bold leading-tight text-center">
-            <span className="flex-grow h-1 bg-primary mr-6"></span>
+            <span className="flex-grow h-1 bg-primary mr-6" />
             <span className="whitespace-nowrap">{product.title}</span>
-            <span className="flex-grow h-1 bg-primary ml-6"></span>
+            <span className="flex-grow h-1 bg-primary ml-6" />
           </h1>
         </div>
 
@@ -118,11 +116,12 @@ const Product = () => {
           {product.items.map((item, index) => (
             <StackedCard key={item.title} index={index}>
               <div className="flex flex-col p-3 h-full">
-                <div className="w-full mb-3 relative h-48">
+                <div className="w-full mb-3 relative">
                   <Image
                     src={item.img}
                     alt={item.title}
-                    fill
+                    width={500}
+                    height={192}
                     className="object-contain rounded-lg"
                   />
                 </div>
