@@ -19,7 +19,6 @@ const HeroSection = () => (
       />
 
       <div className="relative z-20 px-2 py-12 lg:pl-16 flex items-center h-full">
-
         {/* Text */}
         <div className="max-w-lg mx-auto lg:mx-0 text-left">
           <MainHero />
