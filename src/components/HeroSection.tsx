@@ -1,12 +1,9 @@
 import React from "react";
-import Header from "./Header";          // <-- added import
+import Header from "./Header";
 import MainHero from "./MainHero";
 import MainHeroImage from "./MainHeroImage";
-import config from "../config/index.json";
 
 const HeroSection = () => {
-  const { mainHero } = config;
-
   return (
     <section className="w-full relative lg:h-[600px]">
       {/* Header at top */}
