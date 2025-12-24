@@ -15,17 +15,14 @@ const MainHero = () => {
           {withPart?.[0] || ""}
           <span className="mx-1">with</span>
           {withPart?.[1] || ""}
-          <span
-            className="inline bg-gradient-to-r from-purple-600 to-blue-300 bg-clip-text text-transparent ml-2"
-          >
+          <span className="inline bg-gradient-to-r from-purple-600 to-blue-300 bg-clip-text text-transparent ml-2">
             NOVARA{subtitleParts[1] || ""}
           </span>
         </span>
       </h1>
 
       {/* Description */}
-      <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-200">
-      </p>
+      <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-200"></p>
     </div>
   );
 };
