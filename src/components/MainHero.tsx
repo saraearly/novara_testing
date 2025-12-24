@@ -1,6 +1,6 @@
+import Image from "next/image";
 import React from "react";
 import config from "../config/index.json";
-import { ReactComponent as NovaraO } from "../assets/images/network_logo_bluebackground.svg";
 
 const MainHero = () => {
   const { mainHero } = config;
@@ -19,7 +19,13 @@ const MainHero = () => {
           with{" "}
           <span className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-300 bg-clip-text text-transparent">
             N
-            <NovaraO className="inline-block h-[1em] w-auto mx-[0.05em]" />
+            <Image
+              src="/assets/images/network_logo_bluebackground.svg"
+              alt="O in NOVARA"
+              width={24} // adjust width as needed
+              height={24} // scales with font size
+              className="inline-block mx-[0.05em]"
+            />
             VARA
           </span>
         </span>
