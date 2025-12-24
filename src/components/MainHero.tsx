@@ -9,7 +9,9 @@ const MainHero = () => {
       {/* Title */}
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-tight font-bold leading-tight">
         {/* First line: title without 'with NOVARA' */}
-        <span className="block">{mainHero.title.replace("with NOVARA", "")}</span>
+        <span className="block">
+          {mainHero.title.replace("with NOVARA", "")}
+        </span>
 
         {/* Second line: always 'with NOVARA' */}
         <span className="block">
@@ -21,7 +23,7 @@ const MainHero = () => {
       </h1>
 
       {/* Description */}
-      <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-200 max-w-lg">
+      <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-200 max-w-lg text-left">
         {mainHero.description}
       </p>
     </div>
