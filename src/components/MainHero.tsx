@@ -16,7 +16,12 @@ const MainHero = () => {
         {/* Second line: always 'with NOVARA' */}
         <span className="block">
           with{" "}
-          <span className="bg-gradient-to-r from-purple-600 to-teal-500 bg-clip-text text-transparent">
+          <span
+            className="inline-block bg-clip-text text-transparent"
+            style={{
+              backgroundImage: "linear-gradient(90deg, #7B2FF7 0%, #18D3C5 100%)",
+            }}
+          >
             NOVARA
           </span>
         </span>
