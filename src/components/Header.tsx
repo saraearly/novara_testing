@@ -11,7 +11,7 @@ const Menu = () => {
   const { name: companyName, logo } = company;
 
   return (
-    <header className="w-full bg-[#0f2a44] py-6">
+    <header className="w-full bg-[#0f2a44] py-5">
       <Popover>
         <div className="relative pt-4 px-4 sm:px-6 lg:px-8">
           <nav
