@@ -8,7 +8,7 @@ const HeroSection = () => (
     {/* Header at top */}
     <Header />
 
-    <section className="w-full relative lg:h-[600px] pt-20"> {/* add pt-20 to push content below header */}
+    <section className="w-full relative lg:h-[600px] pt-20">
       {/* Hero image (right side on lg and up) */}
       <div className="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 z-0">
         <MainHeroImage />
