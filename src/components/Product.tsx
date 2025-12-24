@@ -1,6 +1,6 @@
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import Image from "next/image"; // Use Next.js Image
+import Image from "next/image";
 import config from "../config/index.json";
 
 function useOnScreen(
@@ -17,10 +17,12 @@ function useOnScreen(
       },
       { rootMargin }
     );
+
     if (ref && ref.current) {
       currentRef = ref.current;
       observer.observe(currentRef);
     }
+
     return () => {
       if (currentRef) observer.unobserve(currentRef);
     };
@@ -86,7 +88,9 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
             0 ${4 + rowIndex}px ${8 + rowIndex}px rgba(0, 0, 0, 0.08),
             inset 0 1px 0 rgba(255, 255, 255, 0.6)
           `,
-          transform: `perspective(1000px) rotateY(${rowIndex === 0 ? -1 : 1}deg) translateZ(0)`,
+          transform: `perspective(1000px) rotateY(${
+            rowIndex === 0 ? -1 : 1
+          }deg) translateZ(0)`,
         }}
       >
         {children}
