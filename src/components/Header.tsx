@@ -52,7 +52,6 @@ const Menu = () => {
           </nav>
         </div>
 
-
         <Transition
           as={Fragment}
           enter="duration-150 ease-out"
@@ -99,7 +98,7 @@ const Menu = () => {
           </Popover.Panel>
         </Transition>
       </Popover>
-    </>
+    </header>
   );
 };
 
