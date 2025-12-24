@@ -8,16 +8,11 @@ const MainHero = () => {
     <div>
       {/* Title */}
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-tight font-bold leading-tight">
-        {/* First line on large screens */}
-        <span className="block lg:block">
-          Innovate medical{" "}
-          <span className="hidden lg:inline">intelligence</span>
-        </span>
+        {/* First line: title without 'with NOVARA' */}
+        <span className="block">{mainHero.title.replace("with NOVARA", "")}</span>
 
-        {/* Second line */}
+        {/* Second line: always 'with NOVARA' */}
         <span className="block">
-          {/* For smaller screens, include "intelligence" again */}
-          <span className="lg:hidden">intelligence </span>
           with{" "}
           <span className="bg-gradient-to-r from-purple-600 to-blue-300 bg-clip-text text-transparent">
             NOVARA
