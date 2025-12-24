@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import config from "../config/index.json";
 
@@ -17,16 +16,8 @@ const MainHero = () => {
         {/* Second line: always 'with NOVARA' */}
         <span className="block">
           with{" "}
-          <span className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-300 bg-clip-text text-transparent">
-            N
-            <Image
-              src="/assets/images/network_logo_bluebackground.svg"
-              alt="O in NOVARA"
-              width={24} // adjust width as needed
-              height={24} // scales with font size
-              className="inline-block mx-[0.05em]"
-            />
-            VARA
+          <span className="bg-gradient-to-r from-purple-600 to-blue-300 bg-clip-text text-transparent">
+            NOVARA
           </span>
         </span>
       </h1>
