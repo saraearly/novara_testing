@@ -2,7 +2,6 @@ import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import config from "../config/index.json";
-import Divider from "./Divider";
 
 function useOnScreen(
   ref: MutableRefObject<HTMLDivElement | null>,
