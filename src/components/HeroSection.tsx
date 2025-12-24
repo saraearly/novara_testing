@@ -8,29 +8,21 @@ const HeroSection = () => (
     {/* Header at top */}
     <Header />
 
-    <section className="w-full relative flex items-center lg:h-[600px] overflow-hidden">
-      {/* Hero image */}
-      <div className="absolute top-0 left-1/2 w-1/2 h-full z-0">
-        <MainHeroImage className="w-full h-full object-cover" />
-      </div>
-
-      {/* Gradient overlay */}
-      <div
-        className="absolute top-0 left-0 w-1/2 h-full z-10"
-        style={{
-          background:
-            "linear-gradient(90deg, #0f2a44 0%, rgba(15,42,68,0.0) 100%)",
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Text container */}
-      <div className="relative z-20 w-full px-6 py-12 lg:py-0 lg:w-1/2 lg:pl-16 flex flex-col justify-center">
-        <div className="max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
-          <MainHero />
+    <section className="relative grid grid-cols-1 lg:grid-cols-2 w-full overflow-hidden">
+    {/* Left side (text + gradient) */}
+    <div className="relative flex items-center px-6 py-12 lg:pl-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f2a44] to-transparent pointer-events-none" />
+        <div className="relative z-10 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+        <MainHero />
         </div>
-      </div>
+    </div>
+
+    {/* Right side (image) */}
+    <div className="h-[300px] lg:h-[600px]">
+        <MainHeroImage className="w-full h-full object-cover" />
+    </div>
     </section>
+
   </div>
 );
 
