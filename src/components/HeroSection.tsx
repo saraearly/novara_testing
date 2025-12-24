@@ -1,8 +1,9 @@
 import React from "react";
+import Image from "next/image"; // import next/image first
 import Header from "./Header";
 import MainHero from "./MainHero";
 import MainHeroImage from "./MainHeroImage";
-import { ReactComponent as Logo } from "../assets/images/network_bluebackground.svg"; // Import SVG as React component
+import Logo from "../assets/images/network_bluebackground.svg"; // Use static import
 
 const HeroSection = () => (
   <div className="relative">
@@ -34,7 +35,13 @@ const HeroSection = () => (
       {/* Circular logo at the bottom center */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-30">
         <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden shadow-lg border-4 border-white flex items-center justify-center bg-white">
-          <Logo className="w-16 h-16 lg:w-24 lg:h-24" />
+          <Image
+            src={Logo}
+            alt="Logo"
+            width={128}
+            height={128}
+            className="object-contain"
+          />
         </div>
       </div>
     </section>
