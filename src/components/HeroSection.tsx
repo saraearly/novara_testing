@@ -10,13 +10,13 @@ const HeroSection = () => (
 
     <section className="w-full relative flex items-center lg:h-[600px] overflow-hidden">
       {/* Hero image */}
-      <div className="absolute inset-0 lg:inset-y-0 lg:left-1/2 lg:w-1/2 z-0">
-        <MainHeroImage />
+      <div className="absolute top-0 left-1/2 w-1/2 h-full z-0">
+        <MainHeroImage className="w-full h-full object-cover" />
       </div>
 
       {/* Gradient overlay */}
       <div
-        className="absolute left-0 top-0 bottom-0 w-full lg:w-1/2 z-10"
+        className="absolute top-0 left-0 w-1/2 h-full z-10"
         style={{
           background:
             "linear-gradient(90deg, #0f2a44 0%, rgba(15,42,68,0.0) 100%)",
