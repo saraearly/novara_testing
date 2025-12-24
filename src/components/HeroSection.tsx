@@ -26,7 +26,7 @@ const HeroSection = () => (
       </div>
 
       {/* Image on right half for large screens */}
-      <div className="absolute top-0 left-1/2 w-1/2 h-full z-0">
+      <div className="absolute top-0 left-[30%] w-[70%] h-full z-0">
         <MainHeroImage className="w-full h-full object-cover" />
       </div>
     </section>
