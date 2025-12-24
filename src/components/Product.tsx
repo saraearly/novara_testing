@@ -1,6 +1,6 @@
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-
+import Image from "next/image"; // Use Next.js Image
 import config from "../config/index.json";
 
 function useOnScreen(
@@ -15,16 +15,14 @@ function useOnScreen(
       ([entry]) => {
         if (entry?.isIntersecting) setIntersecting(entry?.isIntersecting);
       },
-      {
-        rootMargin,
-      }
+      { rootMargin }
     );
-    if (ref && ref?.current) {
+    if (ref && ref.current) {
       currentRef = ref.current;
       observer.observe(currentRef);
     }
     return () => {
-      observer.unobserve(currentRef);
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, [ref, rootMargin]);
 
@@ -59,9 +57,7 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
     }
   }, [onScreen, controls, index]);
 
-  // Create staggered initial positions for stacked effect
-  // Each card starts slightly offset to create a "stacked" appearance
-  const rowIndex = index % 2; // 0 for left column, 1 for right column
+  const rowIndex = index % 2;
   const stackOffset = rowIndex * 10;
   const initialX = rowIndex === 0 ? -30 - stackOffset : 30 + stackOffset;
   const initialY = 40;
@@ -80,9 +76,7 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
       }}
       animate={controls}
       className={`relative ${className}`}
-      style={{
-        transformStyle: "preserve-3d",
-      }}
+      style={{ transformStyle: "preserve-3d" }}
     >
       <div
         className="bg-white rounded-xl shadow-2xl relative overflow-hidden h-full"
@@ -92,9 +86,7 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
             0 ${4 + rowIndex}px ${8 + rowIndex}px rgba(0, 0, 0, 0.08),
             inset 0 1px 0 rgba(255, 255, 255, 0.6)
           `,
-          transform: `perspective(1000px) rotateY(${
-            rowIndex === 0 ? -1 : 1
-          }deg) translateZ(0)`,
+          transform: `perspective(1000px) rotateY(${rowIndex === 0 ? -1 : 1}deg) translateZ(0)`,
         }}
       >
         {children}
@@ -107,8 +99,8 @@ const Product = () => {
   const { product } = config;
 
   return (
-    <section className={`bg-background py-6`} id="product">
-      <div className={`container max-w-5xl mx-auto m-4 px-4`}>
+    <section className="bg-background py-6" id="product">
+      <div className="container max-w-5xl mx-auto m-4 px-4">
         {/* Title with lines on either side */}
         <div className="max-w-4xl mx-auto my-8 px-4">
           <h1 className="flex items-center text-5xl font-bold leading-tight text-center">
@@ -122,11 +114,12 @@ const Product = () => {
           {product.items.map((item, index) => (
             <StackedCard key={item.title} index={index}>
               <div className="flex flex-col p-3 h-full">
-                <div className="w-full mb-3">
-                  <img
-                    className="w-full h-48 object-contain rounded-lg"
+                <div className="w-full mb-3 relative h-48">
+                  <Image
                     src={item.img}
                     alt={item.title}
+                    fill
+                    className="object-contain rounded-lg"
                   />
                 </div>
                 <div className="flex-1 flex flex-col">
@@ -147,4 +140,3 @@ const Product = () => {
 };
 
 export default Product;
-
