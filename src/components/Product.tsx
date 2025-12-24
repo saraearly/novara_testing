@@ -109,15 +109,15 @@ const Product = () => {
         <div className="max-w-4xl mx-auto my-8 px-4">
           <h1 className="flex items-center text-5xl font-bold leading-tight text-center">
             {/* Line on the left with same color as text */}
-            <span className="flex-grow h-1 mr-6" style={{ backgroundColor: "#091232ff" }}></span>
+            <span className="flex-grow h-1 mr-6" style={{ backgroundColor: "#0b1845ff" }}></span>
 
             {/* Text with custom hex color */}
-            <span className="whitespace-nowrap" style={{ color: "#091232ff" }}>
+            <span className="whitespace-nowrap" style={{ color: "#0b1845ff" }}>
               {product.title}
             </span>
 
             {/* Line on the right with same color as text */}
-            <span className="flex-grow h-1 ml-6" style={{ backgroundColor: "#091232ff" }}></span>
+            <span className="flex-grow h-1 ml-6" style={{ backgroundColor: "#0b1845ff" }}></span>
           </h1>
 
         </div>
