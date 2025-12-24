@@ -88,7 +88,9 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
             0 ${4 + rowIndex}px ${8 + rowIndex}px rgba(0, 0, 0, 0.08),
             inset 0 1px 0 rgba(255, 255, 255, 0.6)
           `,
-          transform: `perspective(1000px) rotateY(${rowIndex === 0 ? -1 : 1}deg) translateZ(0)`,
+          transform: `perspective(1000px) rotateY(
+            ${rowIndex === 0 ? -1 : 1}deg
+          ) translateZ(0)`,
         }}
       >
         {children}
