@@ -114,7 +114,7 @@ const Product = () => {
             {/* Text with custom hex color */}
             <span
               className="whitespace-nowrap"
-              style={{ color: "#1A73E8" }} // Replace with any hex color you want
+              style={{ color: "#091232ff" }} // Replace with any hex color you want
             >
               {product.title}
             </span>
