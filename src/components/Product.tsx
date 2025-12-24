@@ -108,20 +108,18 @@ const Product = () => {
         {/* Title with lines on either side */}
         <div className="max-w-4xl mx-auto my-8 px-4">
           <h1 className="flex items-center text-5xl font-bold leading-tight text-center">
-            {/* Black line on the left */}
-            <span className="flex-grow h-1 bg-black mr-6"></span>
+            {/* Line on the left with same color as text */}
+            <span className="flex-grow h-1 mr-6" style={{ backgroundColor: "#091232ff" }}></span>
 
             {/* Text with custom hex color */}
-            <span
-              className="whitespace-nowrap"
-              style={{ color: "#091232ff" }} // Replace with any hex color you want
-            >
+            <span className="whitespace-nowrap" style={{ color: "#091232ff" }}>
               {product.title}
             </span>
 
-            {/* Black line on the right */}
-            <span className="flex-grow h-1 bg-black ml-6"></span>
+            {/* Line on the right with same color as text */}
+            <span className="flex-grow h-1 ml-6" style={{ backgroundColor: "#091232ff" }}></span>
           </h1>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
