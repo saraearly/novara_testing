@@ -9,7 +9,7 @@ const MainHero = () => {
   return (
     <div>
       {/* Title — set to white so it reads over the dark gradient */}
-      <h1 className="text-3xl tracking-tight font-bold sm:text-4xl md:text-5xl lg:text-6xl text-white">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-tight font-bold">
         <span className="block xl:inline">{mainHero.title}</span>{" "}
         <span className="block xl:inline">
           {withPart?.[0] || ""}
@@ -22,8 +22,7 @@ const MainHero = () => {
       </h1>
 
       {/* Description */}
-      <p className="mt-4 text-xl md:text-2xl text-gray-200">
-        {mainHero.description}
+      <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-200">
       </p>
     </div>
   );

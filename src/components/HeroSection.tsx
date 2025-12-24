@@ -14,11 +14,11 @@ const HeroSection = () => (
         className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
         style={{
           background:
-            "linear-gradient(90deg, #151e59ff 0%, #232c69ff 30%, rgba(15,42,68,0.0) 100%)",
+            "linear-gradient(90deg, #0b1b56ff 0%, #112057ff 30%, rgba(15,42,68,0.0) 100%)",
         }}
       />
 
-      <div className="relative z-20 px-2 py-12 lg:pl-16 flex items-center h-full">
+      <div className="relative z-20 px-4 sm:px-6 lg:pl-16 flex items-center h-full">
         {/* Text */}
         <div className="max-w-lg mx-auto lg:mx-0 text-left">
           <MainHero />
