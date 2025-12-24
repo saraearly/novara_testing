@@ -64,7 +64,7 @@ const Header = () => {
             focus
             className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           >
-            <div className="rounded-lg shadow-md bg-[#0f2a44] ring-1 ring-black ring-opacity-5 overflow-hidden">
+            <div className="rounded-lg shadow-md bg-[#0b1b56ff] ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
                 <img className="h-4 w-auto" src={logo} alt={companyName} />
                 <Popover.Button className="bg-[#0f2a44] rounded-md p-2 inline-flex items-center justify-center text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
