@@ -110,13 +110,15 @@ const Product = () => {
   return (
     <section className={`bg-background py-6`} id="product">
       <div className={`container max-w-5xl mx-auto m-4 px-4`}>
-        <h1 className="flex items-center text-5xl font-bold leading-tight text-center my-8">
-          <span className="flex-grow h-1 bg-primary mr-4"></span>
-          <span className="whitespace-nowrap">{product.title}</span>
-          <span className="flex-grow h-1 bg-primary ml-4"></span>
-        </h1>
+        {/* Title with lines on either side */}
+        <div className="max-w-4xl mx-auto my-8 px-4">
+          <h1 className="flex items-center text-5xl font-bold leading-tight text-center">
+            <span className="flex-grow h-1 bg-primary mr-6"></span>
+            <span className="whitespace-nowrap">{product.title}</span>
+            <span className="flex-grow h-1 bg-primary ml-6"></span>
+          </h1>
+        </div>
 
-        <Divider />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
           {product.items.map((item, index) => (
             <StackedCard key={item.title} index={index}>
@@ -129,12 +131,10 @@ const Product = () => {
                   />
                 </div>
                 <div className="flex-1 flex flex-col">
-                  <h3
-                    className={`text-2xl text-gray-800 font-bold leading-tight mb-2 text-center`}
-                  >
+                  <h3 className="text-2xl text-gray-800 font-bold leading-tight mb-2 text-center">
                     {item.title}
                   </h3>
-                  <p className={`text-base text-gray-600 leading-relaxed`}>
+                  <p className="text-base text-gray-600 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -148,3 +148,4 @@ const Product = () => {
 };
 
 export default Product;
+
