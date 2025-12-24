@@ -8,13 +8,13 @@ const HeroSection = () => (
     {/* Header at top */}
     <Header />
 
-    <section className="w-full relative lg:h-[600px] flex items-center">
-      {/* Hero image (right side, starting around halfway) */}
-      <div className="absolute inset-y-0 right-0 lg:w-1/2 lg:left-1/2 z-0">
+    <section className="w-full relative flex items-center lg:h-[600px] overflow-hidden">
+      {/* Hero image */}
+      <div className="absolute inset-0 lg:inset-y-0 lg:left-1/2 lg:w-1/2 z-0">
         <MainHeroImage />
       </div>
 
-      {/* Left gradient overlay */}
+      {/* Gradient overlay */}
       <div
         className="absolute left-0 top-0 bottom-0 w-full lg:w-1/2 z-10"
         style={{
@@ -25,11 +25,9 @@ const HeroSection = () => (
       />
 
       {/* Text container */}
-      <div className="absolute inset-0 flex items-center z-20">
-        <div className="w-full lg:w-1/2 px-6 lg:pl-16">
-          <div className="max-w-lg">
-            <MainHero />
-          </div>
+      <div className="relative z-20 w-full px-6 py-12 lg:py-0 lg:w-1/2 lg:pl-16 flex flex-col justify-center">
+        <div className="max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+          <MainHero />
         </div>
       </div>
     </section>
