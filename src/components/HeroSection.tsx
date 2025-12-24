@@ -3,7 +3,7 @@ import React from "react";
 import Header from "./Header";
 import MainHero from "./MainHero";
 import MainHeroImage from "./MainHeroImage";
-import Logo from "../assets/images/network_bluebackground.png"; // Replace with your logo path
+import Logo from "../assets/images/network_bluebackground.svg"; // Replace with your logo path
 
 const HeroSection = () => (
   <div className="relative">
