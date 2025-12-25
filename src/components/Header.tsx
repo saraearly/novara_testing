@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className="w-full bg-[#091232ff]">
       <nav
-        className="mx-auto max-w-7xl px-4 flex h-12 items-center justify-between"
+        className="flex h-12 items-center justify-between px-2"
         aria-label="Global"
       >
         {/* Logo */}
