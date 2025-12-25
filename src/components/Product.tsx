@@ -101,7 +101,8 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
 
 const Product = () => {
   const { product } = config;
-  const textColor = "#444f78ff"; // same color for lines and text
+  const textColor = "#141a6eff"; // color for text
+  const lineColor = "#8ea6d8ff"; // color for the lines
 
   return (
     <section className="bg-background py-6" id="product">
@@ -111,17 +112,18 @@ const Product = () => {
           <h1 className="flex items-center text-5xl font-bold leading-tight text-center">
             <span
               className="flex-grow h-3 mr-6"
-              style={{ backgroundColor: textColor }}
+              style={{ backgroundColor: lineColor }}
             />
             <span className="whitespace-nowrap" style={{ color: textColor }}>
               {product.title}
             </span>
             <span
               className="flex-grow h-3 ml-6"
-              style={{ backgroundColor: textColor }}
+              style={{ backgroundColor: lineColor }}
             />
           </h1>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
           {product.items.map((item, index) => (
             <StackedCard key={item.title} index={index}>
