@@ -102,7 +102,7 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
 const Product = () => {
   const { product } = config;
   const textColor = "#141a6eff"; // color for text
-  const lineColor = "#a1d9ffff"; // color for the lines
+  const lineColor = "#d2e0e8ff"; // color for the lines
 
   return (
     <section className="bg-background py-6" id="product">
