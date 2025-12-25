@@ -12,9 +12,9 @@ const Header = () => {
   return (
     <header className="w-full bg-[#091232ff] py-5">
       <Popover>
-        <div className="relative px-4 sm:px-6 lg:px-8">
+        <div className="relative px-4 sm:px-6 lg:px-12"> {/* Increased left padding */}
           <nav
-            className="relative flex items-center justify-between sm:h-8 w-full"
+            className="relative flex items-center justify-between sm:h-12 w-full"
             aria-label="Global"
           >
             {/* Logo on the left */}
@@ -24,15 +24,15 @@ const Header = () => {
                 <Image
                   src={logo}
                   alt="logo"
-                  width={48}
-                  height={48}
-                  className="h-8 w-auto sm:h-8"
+                  width={64}   // increased logo size
+                  height={64}  // increased logo size
+                  className="h-10 w-auto sm:h-12"
                 />
               </a>
             </div>
 
             {/* Desktop navigation */}
-            <div className="hidden md:flex space-x-10">
+            <div className="hidden md:flex space-x-12"> {/* increased space between nav items */}
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -76,9 +76,9 @@ const Header = () => {
                 <Image
                   src={logo}
                   alt={companyName}
-                  width={48}
-                  height={48}
-                  className="h-6 w-auto"
+                  width={64}
+                  height={64}
+                  className="h-8 w-auto"
                 />
                 <Popover.Button className="bg-[#0f2a44] rounded-md p-2 inline-flex items-center justify-center text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
                   <span className="sr-only">Close main menu</span>
