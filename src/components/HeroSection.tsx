@@ -35,7 +35,7 @@ const HeroSection = () => (
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-30">
           <Image
-            src="/images/network_bluebackground.svg"
+            src="assets/images/network_bluebackground.svg"
             alt="Logo"
             width={128}
             height={128}
