@@ -12,12 +12,19 @@ const Header = () => {
     <header className="w-full bg-[#091232ff] py-5">
       <Popover>
         <div className="relative px-4 sm:px-6 lg:px-8">
-          <nav className="relative flex items-center justify-between sm:h-8 w-full" aria-label="Global">
+          <nav
+            className="relative flex items-center justify-between sm:h-8 w-full"
+            aria-label="Global"
+          >
             {/* Logo on the left */}
             <div className="flex-shrink-0">
               <a href="#">
                 <span className="sr-only">{companyName}</span>
-                <img alt="logo" className="h-8 w-auto sm:h-8" src={logo} />
+                <img
+                  alt="logo"
+                  className="h-8 w-auto sm:h-8"
+                  src={logo}
+                />
               </a>
             </div>
 
