@@ -25,7 +25,6 @@ const Header = () => {
             priority
           />
         </a>
-
         {/* Navigation — always visible */}
         <div className="flex items-center gap-6">
           {navigation.map((item) => (
