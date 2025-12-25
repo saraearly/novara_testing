@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image"; // Next.js image
+import Image from "next/image";
 import Header from "./Header";
 import MainHero from "./MainHero";
 import MainHeroImage from "./MainHeroImage";
@@ -9,7 +9,7 @@ const HeroSection = () => (
     {/* Header */}
     <Header />
 
-    <section className="relative w-full overflow-hidden h-[300px] lg:h-[600px]">
+    <section className="relative w-full overflow-visible h-[300px] lg:h-[600px]">
       {/* Gradient overlay */}
       <div
         className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
@@ -32,8 +32,8 @@ const HeroSection = () => (
       </div>
 
       {/* Circular logo at the bottom center */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-30">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-30">
+        <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-visible shadow-lg border-4 border-white flex items-center justify-center">
           <Image
             src="assets/images/network_bluebackground.svg"
             alt="Logo"
