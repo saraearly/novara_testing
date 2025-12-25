@@ -1,3 +1,9 @@
+import React, { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Link } from "react-scroll";
+import config from "../config/index.json"; // <-- Make sure this is here
+
 const Header = () => {
   const { navigation, company } = config;
   const { name: companyName, logo } = company;
@@ -6,10 +12,7 @@ const Header = () => {
     <header className="w-full bg-[#091232ff] py-5">
       <Popover>
         <div className="relative px-4 sm:px-6 lg:px-8">
-          <nav
-            className="relative flex items-center justify-between sm:h-8 w-full"
-            aria-label="Global"
-          >
+          <nav className="relative flex items-center justify-between sm:h-8 w-full" aria-label="Global">
             {/* Logo on the left */}
             <div className="flex-shrink-0">
               <a href="#">
@@ -18,8 +21,8 @@ const Header = () => {
               </a>
             </div>
 
-            {/* Desktop navigation (right side) */}
-            <div className="hidden md:flex space-x-10"> {/* increased spacing */}
+            {/* Desktop navigation */}
+            <div className="hidden md:flex space-x-10">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
