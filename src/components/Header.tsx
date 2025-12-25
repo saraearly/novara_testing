@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-scroll";
-import config from "../config/index.json"; // <-- Make sure this is here
+import Image from "next/image"; // import Next.js Image
+import config from "../config/index.json";
 
 const Header = () => {
   const { navigation, company } = config;
@@ -20,10 +21,12 @@ const Header = () => {
             <div className="flex-shrink-0">
               <a href="#">
                 <span className="sr-only">{companyName}</span>
-                <img
-                  alt="logo"
-                  className="h-8 w-auto sm:h-8"
+                <Image
                   src={logo}
+                  alt="logo"
+                  width={48}
+                  height={48}
+                  className="h-8 w-auto sm:h-8"
                 />
               </a>
             </div>
@@ -70,7 +73,13 @@ const Header = () => {
           >
             <div className="rounded-lg shadow-md bg-[#0b1b56ff] ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
-                <img className="h-6 w-auto" src={logo} alt={companyName} />
+                <Image
+                  src={logo}
+                  alt={companyName}
+                  width={48}
+                  height={48}
+                  className="h-6 w-auto"
+                />
                 <Popover.Button className="bg-[#0f2a44] rounded-md p-2 inline-flex items-center justify-center text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
                   <span className="sr-only">Close main menu</span>
                   <XIcon className="h-6 w-6" aria-hidden="true" />
