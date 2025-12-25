@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="w-full bg-[#091232ff] py-5">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="px-4 sm:px-6 lg:px-12">
         <nav
           className="flex items-center justify-between w-full"
           aria-label="Global"
