@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-scroll";
-import Image from "next/image"; // import Next.js Image
+import Image from "next/image";
 import config from "../config/index.json";
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="w-full bg-[#091232ff] py-5">
       <Popover>
-        <div className="relative px-4 sm:px-6 lg:px-12"> {/* Increased left padding */}
+        <div className="relative px-4 sm:px-6 lg:px-12">
           <nav
             className="relative flex items-center justify-between sm:h-12 w-full"
             aria-label="Global"
@@ -24,15 +24,15 @@ const Header = () => {
                 <Image
                   src={logo}
                   alt="logo"
-                  width={64}   // increased logo size
-                  height={64}  // increased logo size
+                  width={64}
+                  height={64}
                   className="h-10 w-auto sm:h-12"
                 />
               </a>
             </div>
 
             {/* Desktop navigation */}
-            <div className="hidden md:flex space-x-12"> {/* increased space between nav items */}
+            <div className="hidden md:flex space-x-12">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
