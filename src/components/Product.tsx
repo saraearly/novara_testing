@@ -109,25 +109,19 @@ const Product = () => {
         {/* Title with colored lines */}
         <div className="max-w-4xl mx-auto my-8 px-4">
           <h1 className="flex items-center text-5xl font-bold leading-tight text-center">
-            {/* Left line */}
             <span
-              className="flex-grow h-3 mr-6" // increased from h-1 to h-3
+              className="flex-grow h-3 mr-6"
               style={{ backgroundColor: textColor }}
             />
-            
-            {/* Text */}
             <span className="whitespace-nowrap" style={{ color: textColor }}>
               {product.title}
             </span>
-            
-            {/* Right line */}
             <span
-              className="flex-grow h-3 ml-6" // increased from h-1 to h-3
+              className="flex-grow h-3 ml-6"
               style={{ backgroundColor: textColor }}
             />
           </h1>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
           {product.items.map((item, index) => (
             <StackedCard key={item.title} index={index}>
