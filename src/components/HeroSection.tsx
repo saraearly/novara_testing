@@ -32,10 +32,10 @@ const HeroSection = () => (
       </div>
 
       {/* Circular logo at the bottom center */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-30">
-        <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden shadow-lg border-4 border-white flex items-center justify-center bg-white">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-30">
           <Image
-            src="assets/images/network_bluebackground.svg"
+            src="/images/network_bluebackground.svg"
             alt="Logo"
             width={128}
             height={128}
