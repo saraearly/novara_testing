@@ -1,9 +1,3 @@
-import React, { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { Link } from "react-scroll";
-import config from "../config/index.json";
-
 const Header = () => {
   const { navigation, company } = config;
   const { name: companyName, logo } = company;
@@ -20,12 +14,12 @@ const Header = () => {
             <div className="flex-shrink-0">
               <a href="#">
                 <span className="sr-only">{companyName}</span>
-                <img alt="logo" className="h-6 w-auto sm:h-6" src={logo} />
+                <img alt="logo" className="h-8 w-auto sm:h-8" src={logo} />
               </a>
             </div>
 
             {/* Desktop navigation (right side) */}
-            <div className="hidden md:flex space-x-6">
+            <div className="hidden md:flex space-x-10"> {/* increased spacing */}
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -33,7 +27,7 @@ const Header = () => {
                   spy={true}
                   smooth={true}
                   duration={1000}
-                  className="text-sm font-medium text-gray-300 hover:text-white cursor-pointer"
+                  className="text-lg font-semibold text-gray-300 hover:text-white cursor-pointer"
                 >
                   {item.name}
                 </Link>
@@ -66,13 +60,13 @@ const Header = () => {
           >
             <div className="rounded-lg shadow-md bg-[#0b1b56ff] ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
-                <img className="h-4 w-auto" src={logo} alt={companyName} />
+                <img className="h-6 w-auto" src={logo} alt={companyName} />
                 <Popover.Button className="bg-[#0f2a44] rounded-md p-2 inline-flex items-center justify-center text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
                   <span className="sr-only">Close main menu</span>
                   <XIcon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
-              <div className="px-2 pt-2 pb-3 space-y-1">
+              <div className="px-2 pt-2 pb-3 space-y-2">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -80,7 +74,7 @@ const Header = () => {
                     spy={true}
                     smooth={true}
                     duration={1000}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white cursor-pointer"
+                    className="block px-3 py-2 rounded-md text-lg font-semibold text-gray-300 hover:text-white cursor-pointer"
                   >
                     {item.name}
                   </Link>
