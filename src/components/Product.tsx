@@ -101,7 +101,7 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
 
 const Product = () => {
   const { product } = config;
-  const textColor = "#091d67ff"; // same color for lines and text
+  const textColor = "#444f78ff"; // same color for lines and text
 
   return (
     <section className="bg-background py-6" id="product">
@@ -109,15 +109,20 @@ const Product = () => {
         {/* Title with colored lines */}
         <div className="max-w-4xl mx-auto my-8 px-4">
           <h1 className="flex items-center text-5xl font-bold leading-tight text-center">
+            {/* Left line */}
             <span
-              className="flex-grow h-1 mr-6"
+              className="flex-grow h-3 mr-6" // increased from h-1 to h-3
               style={{ backgroundColor: textColor }}
             />
+            
+            {/* Text */}
             <span className="whitespace-nowrap" style={{ color: textColor }}>
               {product.title}
             </span>
+            
+            {/* Right line */}
             <span
-              className="flex-grow h-1 ml-6"
+              className="flex-grow h-3 ml-6" // increased from h-1 to h-3
               style={{ backgroundColor: textColor }}
             />
           </h1>
