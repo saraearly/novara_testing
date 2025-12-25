@@ -8,7 +8,7 @@ const Header = () => {
   const { name: companyName, logo } = company;
 
   return (
-    <header className="w-full bg-[#091232ff] py-5">
+    <header className="w-full bg-[#091232ff] py-2 sm:py-3">
       <div className="px-4 sm:px-6 lg:px-12">
         <nav
           className="flex items-center justify-between w-full"
