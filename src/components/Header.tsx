@@ -38,7 +38,6 @@ const Header = () => {
         ))}
       </nav>
     </header>
-
   );
 };
 
