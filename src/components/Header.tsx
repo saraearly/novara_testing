@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="w-full bg-[#091232ff]">
-      <div className="flex justify-start px-4 h-14 items-center">
+      <nav className="flex items-center justify-between h-14 px-4">
         {/* Logo */}
         <a href="#" className="flex items-center">
           <span className="sr-only">{companyName}</span>
@@ -22,20 +22,21 @@ const Header = () => {
             priority
           />
         </a>
-      </div>
 
-      <nav className="mx-auto max-w-7xl px-0 flex h-14 items-center justify-end gap-6">
-        {navigation.map((item) => (
-          <Link
-            key={item.name}
-            to={item.href}
-            smooth
-            duration={1000}
-            className="text-sm font-semibold leading-none text-gray-300 hover:text-white cursor-pointer whitespace-nowrap"
-          >
-            {item.name}
-          </Link>
-        ))}
+        {/* Navigation */}
+        <div className="flex items-center gap-6">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              smooth
+              duration={1000}
+              className="text-sm font-semibold leading-none text-gray-300 hover:text-white cursor-pointer whitespace-nowrap"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
       </nav>
     </header>
   );
