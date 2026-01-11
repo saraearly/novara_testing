@@ -18,16 +18,16 @@ const Pricing = () => {
     <section className={`bg-background py-8`} id="pricing">
       <div className={`container mx-auto px-4 pt-4 pb-12`}>
         <h1
-          className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
+          className={`w-full my-2 text-4xl md:text-5xl font-bold leading-tight text-center`}
         >
-          {title.split(" ").map((word, index) => (
-            <span
-              key={index}
-              className={index % 2 ? "text-primary" : "text-border"}
-            >
-              {word}{" "}
-            </span>
-          ))}
+          <span
+            className="bg-clip-text text-transparent"
+            style={{
+              backgroundImage: "linear-gradient(90deg, #7B2FF7 0%, #18D3C5 100%)",
+            }}
+          >
+            {title}
+          </span>
         </h1>
         <div className={`w-full mb-4`}>
           <div
@@ -56,11 +56,10 @@ const Pricing = () => {
                 {(subgroup.items as TeamMember[]).map((member, index) => (
                   <div
                     key={`${member.name}-${index}`}
-                    className={`bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${
-                      subgroup.name === "Senior Advisor"
-                        ? "max-w-sm w-full"
-                        : ""
-                    }`}
+                    className={`bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${subgroup.name === "Senior Advisor"
+                      ? "max-w-sm w-full"
+                      : ""
+                      }`}
                   >
                     <div className="relative w-full aspect-square overflow-hidden bg-gray-200">
                       <img

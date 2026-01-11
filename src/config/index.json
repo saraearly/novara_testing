@@ -1,6 +1,6 @@
 {
   "company": {
-    "name": "AI Development Solutions",
+    "name": "NOVARA",
     "logo": "/assets/images/logo_bluebackground.svg"
   },
   "navigation": [
@@ -107,7 +107,12 @@
             "link": "#"
           }
         ],
-        "technologies": ["Deep Learning", "Counterfactual Inference", "Clinical Decision Support", "Multi-site Analysis"],
+        "technologies": [
+          "Deep Learning",
+          "Counterfactual Inference",
+          "Clinical Decision Support",
+          "Multi-site Analysis"
+        ],
         "additionalInfo": "Our AI-powered clinical decision support tools help clinicians make faster and more accurate diagnoses across multiple disease domains, with a particular focus on stroke and Parkinson's disease classification."
       },
       {
@@ -137,7 +142,13 @@
             "link": "#"
           }
         ],
-        "technologies": ["Causal AI", "Generative Models", "Counterfactual Generation", "3D Diffusion Models", "Brain Age Prediction"],
+        "technologies": [
+          "Causal AI",
+          "Generative Models",
+          "Counterfactual Generation",
+          "3D Diffusion Models",
+          "Brain Age Prediction"
+        ],
         "additionalInfo": "By generating counterfactual brain images, we enable clinicians to visualize and understand how brain structures might change under different conditions, improving the interpretability of AI predictions."
       },
       {
@@ -160,7 +171,12 @@
             "link": "#"
           }
         ],
-        "technologies": ["In-Silico Modeling", "CNN", "Disease Progression Simulation", "Computational Neuroscience"],
+        "technologies": [
+          "In-Silico Modeling",
+          "CNN",
+          "Disease Progression Simulation",
+          "Computational Neuroscience"
+        ],
         "additionalInfo": "Our computational models simulate disease progression in neurodegenerative conditions, allowing researchers and clinicians to test interventions and understand disease mechanisms in a controlled digital environment."
       },
       {
@@ -190,7 +206,13 @@
             "link": "#"
           }
         ],
-        "technologies": ["Systems Biology", "Boolean Networks", "Agent-Based Modeling", "Gene Regulatory Networks", "Spatial Transcriptomics"],
+        "technologies": [
+          "Systems Biology",
+          "Boolean Networks",
+          "Agent-Based Modeling",
+          "Gene Regulatory Networks",
+          "Spatial Transcriptomics"
+        ],
         "additionalInfo": "Our computational approaches model complex biological systems, from stem cell differentiation to cancer progression, providing insights into gene regulatory mechanisms and cellular behavior."
       },
       {
@@ -213,7 +235,13 @@
             "link": "#"
           }
         ],
-        "technologies": ["Multi-modal MR Imaging", "Automatic Segmentation", "QSM", "SWI", "Image Quality Assessment"],
+        "technologies": [
+          "Multi-modal MR Imaging",
+          "Automatic Segmentation",
+          "QSM",
+          "SWI",
+          "Image Quality Assessment"
+        ],
         "additionalInfo": "Our work improves the accuracy and confidence of MR image interpretation through advanced sequence analysis and automated segmentation techniques, enabling better detection of subtle brain features."
       },
       {
@@ -229,7 +257,12 @@
             "link": "#"
           }
         ],
-        "technologies": ["Signal Processing", "Brain Dynamics", "Neural Signal Analysis", "Time-Series Analysis"],
+        "technologies": [
+          "Signal Processing",
+          "Brain Dynamics",
+          "Neural Signal Analysis",
+          "Time-Series Analysis"
+        ],
         "additionalInfo": "Our signal processing research focuses on extracting meaningful patterns from neural signals, contributing to a better understanding of brain function and dynamics."
       }
     ]

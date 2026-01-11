@@ -68,12 +68,23 @@ const StackedCard = ({
     }
   }, [onScreen, controls, index, hasAnimated]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 768);
+      const handleResize = () => setIsMobile(window.innerWidth < 768);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   // Create staggered initial positions for stacked effect
   const rowIndex = index % 2; // 0 for left column, 1 for right column
   const stackOffset = rowIndex * 10;
-  const initialX = rowIndex === 0 ? -30 - stackOffset : 30 + stackOffset;
+  const initialX = isMobile ? 0 : (rowIndex === 0 ? -30 - stackOffset : 30 + stackOffset);
   const initialY = 40;
-  const initialRotate = rowIndex === 0 ? -3 : 3;
+  const initialRotate = isMobile ? 0 : (rowIndex === 0 ? -3 : 3);
 
   return (
     <motion.div
@@ -103,16 +114,16 @@ const StackedCard = ({
           boxShadow: isExpanded
             ? "0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.1)"
             : `
-              0 ${8 + rowIndex * 2}px ${
-                20 + rowIndex * 3
-              }px rgba(0, 0, 0, 0.12),
+              0 ${8 + rowIndex * 2}px ${20 + rowIndex * 3
+            }px rgba(0, 0, 0, 0.12),
               0 ${4 + rowIndex}px ${8 + rowIndex}px rgba(0, 0, 0, 0.08),
               inset 0 1px 0 rgba(255, 255, 255, 0.6)
             `,
-          transform: isExpanded
-            ? "perspective(1000px) rotateY(0deg) translateZ(0)"
-            : `perspective(1000px) rotateY(${
-                rowIndex === 0 ? -1 : 1
+          transform: isMobile
+            ? "none"
+            : isExpanded
+              ? "perspective(1000px) rotateY(0deg) translateZ(0)"
+              : `perspective(1000px) rotateY(${rowIndex === 0 ? -1 : 1
               }deg) translateZ(0)`,
         }}
         transition={{ duration: 0.3 }}
@@ -136,16 +147,16 @@ const Projects = () => {
     <section className={`bg-background py-6`} id="projects">
       <div className={`container max-w-5xl mx-auto m-4 px-4`}>
         <h1
-          className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
+          className={`w-full my-2 text-4xl md:text-5xl font-bold leading-tight text-center flex flex-col md:flex-row items-center justify-center`}
         >
-          {title.split(" ").map((word, index) => (
-            <span
-              key={index}
-              className={index % 2 ? "text-primary" : "text-border"}
-            >
-              {word}{" "}
-            </span>
-          ))}
+          <span
+            className="bg-clip-text text-transparent"
+            style={{
+              backgroundImage: "linear-gradient(90deg, #7B2FF7 0%, #18D3C5 100%)",
+            }}
+          >
+            {title}
+          </span>
         </h1>
         <Divider />
         {subtitle && (
@@ -176,9 +187,8 @@ const Projects = () => {
                 <div className="flex flex-col h-full relative">
                   <div className="w-full mb-3 flex-shrink-0">
                     <img
-                      className={`w-full object-contain rounded-lg transition-all duration-300 ${
-                        isExpanded ? "h-64" : "h-48"
-                      }`}
+                      className={`w-full object-contain rounded-lg transition-all duration-300 ${isExpanded ? "h-64" : "h-48"
+                        }`}
                       src={project.img}
                       alt={project.title}
                     />

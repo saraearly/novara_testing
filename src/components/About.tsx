@@ -13,9 +13,7 @@ const About = () => {
       className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-8"
     >
       <div className="flex flex-col items-center justify-center">
-        <div>
-          <img src={logo} alt={companyName} className="h-6 w-auto" />
-        </div>
+
         {sections && sections.length > 0 && (
           <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-4 h-12">
             {sections.map((section: any, index: number) => (

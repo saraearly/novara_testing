@@ -10,7 +10,11 @@ const Features = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2
-            className={`text-base text-primary font-semibold tracking-wide uppercase`}
+            className={`text-base font-semibold tracking-wide uppercase bg-clip-text text-transparent`}
+            style={{
+              backgroundImage:
+                "linear-gradient(90deg, #7B2FF7 0%, #18D3C5 100%)",
+            }}
           >
             {title}
           </h2>

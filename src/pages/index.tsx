@@ -9,7 +9,7 @@ import Projects from "../components/Projects";
 import HeroSection from "../components/HeroSection"; // <-- New combined hero
 
 const App = () => (
-  <div className="bg-background grid gap-y-8 overflow-hidden">
+  <div className="bg-background grid gap-y-8 overflow-x-hidden pb-8">
     {/* Hero Section */}
     <HeroSection />
 

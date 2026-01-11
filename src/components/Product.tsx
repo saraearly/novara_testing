@@ -59,11 +59,27 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
     }
   }, [onScreen, controls, index]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if window is defined (client-side) and width is less than md breakpoint
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 768);
+
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   const rowIndex = index % 2;
   const stackOffset = rowIndex * 10;
-  const initialX = rowIndex === 0 ? -30 - stackOffset : 30 + stackOffset;
+  const initialX = isMobile ? 0 : (rowIndex === 0 ? -30 - stackOffset : 30 + stackOffset);
   const initialY = 40;
-  const initialRotate = rowIndex === 0 ? -3 : 3;
+  const initialRotate = isMobile ? 0 : (rowIndex === 0 ? -3 : 3);
 
   return (
     <motion.div
@@ -88,7 +104,7 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
             0 ${4 + rowIndex}px ${8 + rowIndex}px rgba(0, 0, 0, 0.08),
             inset 0 1px 0 rgba(255, 255, 255, 0.6)
           `,
-          transform: `perspective(1000px) rotateY(
+          transform: isMobile ? 'none' : `perspective(1000px) rotateY(
             ${rowIndex === 0 ? -1 : 1}deg
           ) translateZ(0)`,
         }}
@@ -101,7 +117,6 @@ const StackedCard = ({ children, index, className = "" }: StackedCardProps) => {
 
 const Product = () => {
   const { product } = config;
-  const textColor = "#141a6eff"; // color for text
   const lineColor = "#d2e0e8ff"; // color for the lines
 
   return (
@@ -109,22 +124,28 @@ const Product = () => {
       <div className="container max-w-5xl mx-auto m-4 px-4">
         {/* Title with colored lines */}
         <div className="max-w-4xl mx-auto my-8 px-4">
-          <h1 className="flex items-center text-5xl font-bold leading-tight text-center">
+          <h1 className="flex flex-col md:flex-row items-center justify-center text-4xl md:text-5xl font-bold leading-tight text-center">
             <span
-              className="flex-grow h-3 mr-6"
+              className="w-24 h-3 md:flex-grow md:mr-6 mb-4 md:mb-0 bg-primary"
               style={{ backgroundColor: lineColor }}
             />
-            <span className="whitespace-nowrap" style={{ color: textColor }}>
+            <span
+              className="whitespace-nowrap px-4 bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, #7B2FF7 0%, #18D3C5 100%)",
+              }}
+            >
               {product.title}
             </span>
             <span
-              className="flex-grow h-3 ml-6"
+              className="w-24 h-3 md:flex-grow md:ml-6 mt-4 md:mt-0 bg-primary"
               style={{ backgroundColor: lineColor }}
             />
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto px-4 justify-items-center">
           {product.items.map((item, index) => (
             <StackedCard key={item.title} index={index}>
               <div className="flex flex-col p-3 h-full">
@@ -134,7 +155,7 @@ const Product = () => {
                     alt={item.title}
                     width={500}
                     height={192}
-                    className="object-contain rounded-lg"
+                    className="object-cover w-full h-48 rounded-lg"
                   />
                 </div>
                 <div className="flex-1 flex flex-col">

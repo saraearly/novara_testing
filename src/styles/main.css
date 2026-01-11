@@ -12,10 +12,10 @@
 html,
 body,
 * {
-  font-family: 'Urbanist', sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
 }
 
-a { 
+a {
   @apply text-primary;
 }
 
@@ -34,13 +34,13 @@ a:hover {
 }
 
 .play-regular {
-  font-family: "Play", sans-serif !important;
+  font-family: "Google Sans", sans-serif !important;
   font-weight: 400 !important;
   font-style: normal;
 }
 
 .play-bold {
-  font-family: "Play", sans-serif !important;
+  font-family: "Google Sans", sans-serif !important;
   font-weight: 700 !important;
   font-style: normal;
 }

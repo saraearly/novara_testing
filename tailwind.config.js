@@ -17,8 +17,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Urbanist', 'sans-serif'],
-        play: ['Play', 'sans-serif'],
+        sans: ['"Google Sans"', 'sans-serif'],
+        play: ['"Google Sans"', 'sans-serif'],
       },
       colors: {
         primary: '#2685ba',

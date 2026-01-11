@@ -9,7 +9,7 @@ const HeroSection = () => (
     {/* Header */}
     <Header />
 
-    <section className="relative w-full overflow-visible h-[300px] lg:h-[600px]">
+    <section className="relative w-full overflow-visible h-[600px] lg:h-[700px]">
       {/* Gradient overlay */}
       <div
         className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
@@ -27,8 +27,8 @@ const HeroSection = () => (
       </div>
 
       {/* Hero image */}
-      <div className="absolute top-0 left-[30%] w-[70%] h-full z-0">
-        <MainHeroImage className="w-full h-full object-cover" />
+      <div className="absolute top-0 right-0 w-full lg:left-[30%] lg:w-[70%] h-full z-0">
+        <MainHeroImage className="w-full h-full object-cover opacity-50 lg:opacity-100" />
       </div>
 
       {/* Circular logo at the bottom center */}
